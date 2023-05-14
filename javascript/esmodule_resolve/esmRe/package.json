@@ -1,0 +1,16 @@
+{
+  "name": "esmRe",
+  "version": "3.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@cxn/test": "workspace:^"
+  }
+}

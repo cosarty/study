@@ -1,0 +1,11 @@
+lockfileVersion: '6.0'
+
+importers:
+
+  esmRe:
+    dependencies:
+      '@cxn/test':
+        specifier: workspace:^
+        version: link:../testModule/test
+
+  testModule/test: {}
