@@ -1,0 +1,67 @@
+@startuml
+actor 学生用户
+' boundary Foo2
+' control Foo3
+' entity Foo4
+' database Foo5
+' collections Foo6
+用户 -> 人脸录入检测 : 判断学生是否录入人脸
+activate 用户
+人脸录入检测 -> 人脸录入 : 未录入
+activate 人脸录入
+activate 人脸录入检测 
+
+人脸录入-> 人脸样板库 : 搜索人脸样板库
+activate 人脸样板库
+人脸样板库 -> 入库 : 添加到人脸样板库
+activate 入库
+入库 -> 人脸检测 : 进行人脸检测
+activate 人脸检测
+deactivate 入库
+人脸录入检测 -> 人脸检测 : 活体检测
+deactivate 人脸录入检测
+deactivate 人脸录入
+人脸检测 -> 人脸样板库 : 搜索人脸样本库
+deactivate 人脸检测
+人脸样板库-> 用户 : 识别成功
+deactivate 人脸样板库
+
+
+
+
+
+' newpage
+
+' Alice -> Bob : message 1
+' Alice -> Bob : message 2
+
+' newpage
+
+' Alice -> Bob : message 3
+' Alice -> Bob : message 4
+
+' newpage A title for the\nlast page
+
+' Alice -> Bob : message 5
+' Alice -> Bob : message 6
+
+
+' == Initialization ==
+' participant User
+
+' User -> A: DoWork
+' activate A #FFBBBB
+
+' A -> A: Internal call
+' activate A #DarkSalmon
+' note left: this is a first note
+
+' A -> B: << createRequest >>
+' activate B
+
+' B --> A: RequestCreated
+' deactivate B
+' deactivate A
+' A -> User: Done
+' deactivate A
+@enduml

@@ -1,0 +1,65 @@
+@startuml
+actor Foo1
+' boundary Foo2
+' control Foo3
+' entity Foo4
+' database Foo5
+' collections Foo6
+Foo1 -> Foo2 : To boundary
+Foo1 --> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+Foo1 -> Foo6 : To collections
+
+== Initialization ==
+
+Bob ->x Alice
+Bob -> Alice
+Bob ->> Alice
+Bob -\ Alice
+Bob \\- Alice
+Bob //-- Alice
+
+Bob ->o Alice
+Bob o\\-- Alice
+
+Bob <-> Alice
+Bob <->o Alice
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+
+' newpage
+
+' Alice -> Bob : message 1
+' Alice -> Bob : message 2
+
+' newpage
+
+' Alice -> Bob : message 3
+' Alice -> Bob : message 4
+
+' newpage A title for the\nlast page
+
+' Alice -> Bob : message 5
+' Alice -> Bob : message 6
+
+
+== Initialization ==
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+note left: this is a first note
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+@enduml
