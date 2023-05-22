@@ -2,8 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "测试网站",
+  title: "测试网站11",
   description: "学习一下",
+  srcDir: 'src',
+  markdown: {
+    lineNumbers:true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
