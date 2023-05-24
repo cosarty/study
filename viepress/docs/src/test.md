@@ -1,3 +1,8 @@
+---
+editLink: true
+sidebar : false
+---
+
 # 测试
 
 {{ 1+1 }}
