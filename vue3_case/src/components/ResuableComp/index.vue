@@ -9,6 +9,8 @@
   <ReuseFoo  message="cxn2"></ReuseFoo>
 
   <div v-html="msg"  contenteditable></div>
+
+  <pre >{{ innerHTML }}</pre>
 </template>
 
 <script setup lang="ts">
@@ -18,6 +20,10 @@ import { ref } from 'vue';
 const [DefineFoo, ReuseFoo] = createReusableTemplate<{ message: string }>()
 
 const msg = ref('ghgfhgf')
+
+const props =  defineProps<{innerHTML?:string}>()
+console.log('props: ', props);
+
 </script>
 
 <style scoped lang="scss">
