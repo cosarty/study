@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  密码校验: <input id="inp">
+  <span id="tip"></span>
+  <script>
+    const input = document.getElementById('inp')
+    const tip = document.getElementById('tip')
+    const reg = /^1\d{10}$/g
+    input.oninput = change = (e) => {
+      reg.lastIndex = 0
+      if (reg.test(e.target.value)) {
+        tip.textContent = '过'
+      } else {
+        tip.textContent = '不过'
+      }
+    }
+  </script>
+</body>
+
+</html>
