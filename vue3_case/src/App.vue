@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import ResuableComp from '@/components/ResuableComp/index.vue'
-const text = `<span>hhhh</span>
-         <i>gfh</i>
-`
+import VirualList from '@/components/virtualList/index'
 </script>
 
 <template>
-  测试
- 
-    <ResuableComp v-html="text"/>
-
+  <VirualList></VirualList>
 </template>
 
 <style scoped lang="scss"></style>

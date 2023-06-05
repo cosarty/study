@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon --ext js,ts --exec ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa-router": "7",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "3",
+    "koa-router": "7"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.6",
+    "@types/koa-bodyparser": "^3.0.26"
+  }
+}
