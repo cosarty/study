@@ -1,0 +1,12 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  es-module-lexer:
+    specifier: 1.2.1
+    version: 1.2.1
+
+packages:
+
+  /es-module-lexer@1.2.1:
+    resolution: {integrity: sha512-9978wrXM50Y4rTMmW5kXIC09ZdXQZqkE4mxhwkd8VbzsGkXGPgV4zWuqQJgCEzYngdo2dYDa0l8xhX4fkSwJSg==}
+    dev: false
