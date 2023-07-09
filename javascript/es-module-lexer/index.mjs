@@ -1,9 +1,7 @@
-import {init,parse} from 'es-module-lexer'
+import { init, parse } from 'es-module-lexer'
 
-
-
-(async () => {
-  await init 
+;(async () => {
+  await init
   const source = `
   import { name } from 'mod\\u1011';
   import json from './json.json' assert { type: 'json' }
@@ -16,11 +14,10 @@ import {init,parse} from 'es-module-lexer'
   // Comments provided to demonstrate edge cases
   import /*comment!*/ (  'asdf', { assert: { type: 'json' }});
   import /*comment!*/.meta.asdf;
-  `;
-  const [imports,exports] = parse(source)
-  console.log('imports: ', imports);
+  `
+  const [imports, exports] = parse(source)
+  console.log('imports: ', imports)
   // console.log('imports: ', imports);
-  console.log('exports: ', exports);
-  
-
+  console.log('exports: ', exports)
 })()
+
