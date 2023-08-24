@@ -1,21 +1,9 @@
-<!-- <template>
-不错嘛
-</template> -->
+<template>不错嘛:{{ data }}</template>
 
-<script lang="ts">
-import { defineComponent, h ,createElementVNode} from 'vue';
+<script lang="ts" setup generic="T ">
+import { defineComponent } from 'vue'
 
-
-
-export default defineComponent({
-  render() {
-    return h('h1','hhhh') 
-  }
-})
-
-
+defineProps<{ data: T }>()
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
