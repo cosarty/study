@@ -12,12 +12,9 @@ const { code } = transformSync(fs.readFileSync('./test.ts', 'utf8'), {
 const loadModule = (code) => {
   // 保存默认加载器
   const defaultLoader = require.extensions['.ts']
-
   const file = require.resolve('./test.ts')
-  console.log('file: ', file)
-  require.extensions['.ts'] = function (module, filename) {
-    console.log('filename: ', filename)
 
+  require.extensions['.ts'] = function (module, filename) {
     if (filename === file) {
       module._compile(code, file)
     } else {
@@ -25,9 +22,7 @@ const loadModule = (code) => {
     }
   }
   let raw = require('./test.ts')
-  // console.log(require)
   delete require.cache[file]
-
   raw = raw.__esModule ? raw.default : raw
 
   return raw

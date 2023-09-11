@@ -1,27 +1,25 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import ResuableComp from '@/components/ResuableComp/index.vue'
 import VirualList from '@/components/virtualList/index'
-import IntersectionOverserve from './components/IntersectionOverserve/index.vue'
+import IntersectionOverserve from './components/IntersectionObserver/index.vue'
 import JSXTest from './components/JSXTest/index.vue'
 import Test from './Test.vue'
 import Vueuse from '@/components/Vueuse/index.vue'
 
-
+// 测试全局数据共享的逻辑
 import EffectScopeVue from '@/components/EffectScopeVue/index.vue'
-import { ref } from 'vue'
 
-const hiddeng = ref(false)
+import ResizeObserver from '@/components/ResizeObserver/index.vue'
 
 </script>
 
 <template>
-  <!-- <IntersectionOverserve></IntersectionOverserve> -->
+  <IntersectionOverserve></IntersectionOverserve>
   <!-- <Test :data="{ name: 'da', age: 18 }"></Test> -->
   <!-- <JSXTest /> -->
-  <Vueuse />
-  <!-- <button @click="hiddeng = !hiddeng">显示隐藏</button> -->
-  <!-- v-if="hiddeng" / -->
-  <EffectScopeVue  />
+  <!-- <Vueuse /> -->
+  <!-- <ResizeObserver /> -->
 </template>
 
 <style scoped lang="scss"></style>
