@@ -1,10 +1,10 @@
 <script setup lang="ts">
-
+import Test from './components/Test.vue'
 
 </script>
 
 <template>
-  <div
+  <!-- <div
     class="selection:bg-fuchsia-300 selection:text-fuchsia-900 space-y-2 max-w-max mx-auto focus-within:border-indigo-700 focus-within:border-2">
 
     <div v-for="num in 5" :key="num" class=" first-of-type:text-amber-600 first-of-type:bg-yellow-100">{{ num }}</div>
@@ -59,13 +59,22 @@
 
     <ul>
       <li>
-        <p>Lorem ipsum...</p>
+        <p class="test-color">Lorem ipsum...</p>
       </li>
 
     </ul>
   </div>
 
-  <button class="btn-primary">按钮</button>
+  <button class="btn-primary">按钮</button> -->
+  <!-- <div>
+    <div class="group"><span class=" group-first:text-red-400">1</span>fsdfd</div>
+    <div ><span>2</span></div>
+    <div ><span>3</span></div>
+    <div ><span>4</span></div>
+    <div ><span>5</span></div>
+
+  </div> -->
+<Test />
 </template>
 
 <style scoped lang="scss">
@@ -73,7 +82,11 @@
   color: red;
 }
 
-.btn-primary {
-    @apply py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
-  }
+// .btn-primary {
+//     @apply py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+//   }
+
+.test-color{
+  color: theme('other.abc');
+}
 </style>

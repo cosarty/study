@@ -7,7 +7,14 @@ export default {
     // },
 
     extend: {
-
+      colors: {
+        other: {
+          a:'red'
+        }
+      },
+      other: {
+        abc:'blue'
+      }
     },
   },
   plugins: [],
