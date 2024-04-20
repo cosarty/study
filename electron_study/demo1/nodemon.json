@@ -1,0 +1,7 @@
+{
+  "ignore": ["node_modules", "dist"],
+  "colours": true,
+  "verbose": true,
+  "watch": ["*.*"],
+  "ext": "html,js"
+}

@@ -1,15 +1,15 @@
 {
-  "name": "demo",
+  "name": "demo1",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": " nodemon --exec electron ."
-  },
+    "dev": "nodemon --exec electron ."
+   },
   "keywords": [],
-  "author": "cxn",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^29.0.1"
+    "electron": "^30.0.1"
   }
 }
